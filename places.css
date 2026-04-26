@@ -1,107 +1,95 @@
-#miesta {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  background-color: var(--orange);
-  padding: 3rem;
-}
-
-.miesta-content {
-  display: flex;
-  gap: 2rem;
-}
-
 #places {
-  flex: 0 0 45%;
+  width: 550px;
+  margin: 1rem auto 5rem auto;
+
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 10px;
+
+  background-color: var(--orange);
 }
 
-#map {
-  flex: 0 0 55%;
+/* row layout */
+.place-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between; 
 }
 
+/* alternate layout */
+.place-row.reverse {
+  flex-direction: row-reverse;
+}
+
+/* image card */
 .place {
+  width: 200px;
+  padding: 10px;
+
   background-color: var(--white);
   color: var(--orange);
+
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
-  border-radius: 10px;
-  padding: 1.5rem;
-  min-height: 150px;
+  text-align: center;
+
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.place i {
-  margin-bottom: 1rem;
+.place:hover {
+  transform: scale(1.05) rotate(0deg);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
 }
 
-.place > div:not(.accommodation-grid) {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 1.5rem;
+/* image */
+.place-image {
   width: 100%;
-  text-align: center;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  margin-bottom: 8px;
 }
 
-.place span {
-  text-align: center;
+/* caption */
+.place-caption {
+  font-size: 0.95rem;
+  margin: 0;
 }
 
-.place .label {
-  margin-top: 1rem;
-  font-size: 10px;
-  text-transform: uppercase;
+/* text */
+.place-text {
+  color: var(--white);
+  max-width: 300px;
 }
 
-.accommodation-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  width: 100%;
-  margin-top: 20px;
+.place-text h2 {
+  margin: 0 0 0.3rem 0;
+  font-size: 1.3rem;
 }
 
-.accommodation-item {
-  text-align: center;
+.place-text p {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 0.95rem;
 }
 
-@media (max-width: 768px) {
-  .miesta-content {
-    flex-direction: column;
-  }
-
+/* mobile */
+@media (max-width: 480px) {
   #places {
-    flex: 1;
+    width: 90%;
+    padding: 10px;
+    column-gap: 10px;
+    row-gap: 10px;
   }
 
-  #map {
-    flex: 1;
-    height: 300px;
-  }
-
-  .accommodation-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-  }
-}
-
-@media (max-width: 600px) {
-  #miesta {
-    padding: 1rem;
+  .place-text {
+    width: 55%;
   }
 
   .place {
-    min-height: 120px;
-    padding: 1rem;
-  }
-
-  .accommodation-grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
+    width: 100px;
   }
 }

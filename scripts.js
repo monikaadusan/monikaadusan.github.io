@@ -61,7 +61,7 @@ function initMap() {
   ];
   
   var map = L.map('map-container', {
-    center: [47.757503, 18.126928],
+    center: [47.757287, 18.126820],
     zoom: 13,
     zoomSnap: 0.25,
     zoomDelta: 0.25, 

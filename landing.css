@@ -7,67 +7,15 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  z-index: 1;
 }
 
-/* Make sure text stays above background but below pattern if desired */
 #landing-page header {
-  color: #fff;
+  color: var(--white);
   text-align: center;
   position: relative;
-  z-index: 2;
 }
 
-/* Decorative pattern sides for the entire page */
-.pattern-side-left, .pattern-side-right {
-  position: fixed;
-  top: 0;
-  width: 100px;
-  height: 100vh;
-  background-image: url('images/pattern.png');
-  background-repeat: repeat-y;
-  background-size: 400px 400px;
-  z-index: 100;
-  pointer-events: none;
-}
-.pattern-side-left {
-  left: 0;
-  border-right: 2px solid rgba(0,0,0,0.08);
-}
-.pattern-side-right {
-  right: 0;
-  border-left: 2px solid rgba(0,0,0,0.08);
-}
-
-html, body {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-body {
-  padding-left: 100px;
-  padding-right: 100px;
-  box-sizing: border-box;
-}
-
-@media (max-width: 700px) {
-  .pattern-side-left, .pattern-side-right {
-    width: 50px;
-  }
-  body {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-}
-
-@media (max-width: 480px) {
-  .pattern-side-left, .pattern-side-right {
-    width: 30px;
-    background-size: 200px 200px;
-  }
-  body {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
+#landing-page #landing-image {
+  text-align: center;
+  position: top;
 }

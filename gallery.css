@@ -1,81 +1,42 @@
 #photo-menu {
-  padding: 80px 20px;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0;
   box-sizing: border-box;
-}
-
-/* GRID */
-.polaroid-grid {
-  max-width: 900px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
-  gap: 50px;
 }
 
 .polaroid-grid {
   max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 50px;
+  column-gap: 50px;
   box-sizing: border-box;
 }
 
-/* Limit to max 3 polaroids per row */
-.polaroid-grid {
-  grid-template-columns: repeat(3, 1fr);
+.polaroid {
+  width: 220px;
+  background: var(--white);
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-@media (max-width: 900px) {
-  .polaroid-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 600px) {
-  .polaroid-grid {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 100%;
-    margin: 0 auto;
-    gap: 10px;
-  }
-  
-  #photo-menu {
-    padding: 40px 15px;
-  }
+.polaroid img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  aspect-ratio: 1 / 1;
 }
 
-@media (max-width: 480px) {
-  .polaroid-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-    max-width: 90vw;
-    margin: 0 auto;
-  }
-  
-  #photo-menu {
-    padding: 30px 10px;
-  }
-}
-
-/* Responsive fix: prevent gallery overlap with pattern sides */
-@media (max-width: 1200px) {
-  .polaroid-grid {
-    max-width: calc(100vw - 220px); /* 2x pattern sides + gap */
-    padding-left: 110px;
-    padding-right: 110px;
-  }
-}
-@media (max-width: 900px) {
-  .polaroid-grid {
-    max-width: 100vw;
-    padding-left: 10vw;
-    padding-right: 10vw;
-    gap: 30px;
-  }
-}
-@media (max-width: 600px) {
-  .polaroid-grid {
-    padding-left: 0;
-    padding-right: 0;
-    gap: 15px;
-  }
+.caption {
+  margin-top: 20px;
+  font-size: 20px;
+  color: var(--orange);
 }
 
 .polaroid-link {
@@ -90,43 +51,13 @@
   transform: scale(1.05);
 }
 
-/* Alternate polaroid rotation for odd/even */
 .polaroid-link:nth-child(odd) .polaroid {
   transform: rotate(-4deg);
+  margin-top: -15px;
 }
+
 .polaroid-link:nth-child(even) .polaroid {
   transform: rotate(4deg);
-}
-
-/* Remove rotation from .polaroid-link itself */
-.polaroid-link:nth-child(odd),
-.polaroid-link:nth-child(even) {
-  transform: none;
-}
-
-.polaroid {
-  width: 200px;
-  background: var(--offwhite);
-  padding: 10px 10px 20px 10px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-  text-align: center;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-@media (max-width: 600px) {
-  .polaroid {
-    width: 100%;
-    max-width: 150px;
-    padding: 6px 6px 12px 6px;
-  }
-}
-
-@media (max-width: 480px) {
-  .polaroid {
-    width: 100%;
-    max-width: 120px;
-    padding: 5px 5px 10px 5px;
-  }
 }
 
 .polaroid-link:hover .polaroid {
@@ -134,34 +65,47 @@
   transform: scale(1.07) rotate(0deg);
 }
 
-/* IMAGE */
-.polaroid img {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  display: block;
-  aspect-ratio: 1 / 1;
+@media (max-width: 1200px) {
+  .polaroid-grid {
+    row-gap: 50px;
+    column-gap: 50px;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 100px;
+  }
+
+  .polaroid {
+    width: 200px;
+    padding: 15px;
+  }
+
+  .caption {
+    margin-top: 5px;
+    font-size: 16px;
+  }
 }
 
-/* Responsive fix for image size on small screens */
 @media (max-width: 600px) {
-  .polaroid img {
-    width: 130px;
-    height: 130px;
+  .polaroid-grid {
+    row-gap: 50px;
+    column-gap: 50px;
+    margin-top: -50px;
+  }
+  
+  .polaroid {
+    width: 150px;
+    padding: 5px;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 480px) {
-  .polaroid img {
+@media (max-width: 480px) {  
+  .polaroid-grid {
+    row-gap: 25px;
+    column-gap: 25px;
+  }
+  
+  .polaroid {
     width: 100px;
-    height: 100px;
+    padding: 5px;
   }
-}
-
-/* CAPTION */
-.caption {
-  margin-top: 20px;
-  font-family: "IMFellEnglish-Regular", monospace;
-  font-size: 20px;
-  color: var(--orange);
 }

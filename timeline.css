@@ -1,116 +1,60 @@
-/* Timeline Container */
-.timeline {
+#timeline {
+  width: 600px;
+  margin: 0 auto 5rem auto;
+  background-color: var(--orange);
+  color: var(--white);
+  display: flex;
   position: relative;
-  margin: 0 3rem;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
-.max-width-container {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-/* Vertical Line */
-.timeline::before {
+#timeline::before {
   content: "";
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 5px;
-  width: 1px;
+  top: 40px;
+  bottom: 40px;
+  left: 20px;
+  margin-top: -10px;
+  width: 2px;
   background-color: var(--white);
+  z-index: 10;
 }
 
-/* Timeline Item */
 .timeline-item {
   position: relative;
   display: flex;
-  align-items: center;
-  margin-bottom: 40px;
+  align-items: top;
+  margin: 20px;
+  color: var(--white);
 }
 
-/* Circle */
+.timeline-item:last-child {
+  margin-bottom: 10px;
+}
+
 .timeline-item::before {
   content: "";
   position: absolute;
   width: 11px;
   height: 11px;
   background-color: var(--white);
+  color: var(--white);
   border-radius: 50%;
+  margin-left: -5px;
 }
 
-/* Text Alignment */
 .timeline-content {
-  margin-left: 50px;
+  margin-top: -5px;
+  margin-left: 20px;
+  margin-bottom: 0;
+  margin-right: 0;
 }
 
-.timeline-dots {
-  margin-left: 50px;
-}
-
-@media (max-width: 768px) {
-  .timeline {
-    margin: 0 1rem;
-  }
-
-  .timeline::before {
-    left: 3px;
-  }
-
-  .timeline-item {
-    margin-bottom: 30px;
-  }
-
-  .timeline-content {
-    margin-left: 40px;
-  }
-
-  .timeline-dots {
-    margin-left: 40px;
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .timeline {
-    margin: 0 0.5rem;
-  }
-
-  .timeline::before {
-    left: 2px;
-  }
-
-  .timeline-item {
-    margin-bottom: 25px;
-  }
-
-  .timeline-item::before {
-    width: 9px;
-    height: 9px;
-  }
-
-  .timeline-content {
-    margin-left: 30px;
-    font-size: 0.9rem;
-  }
-
-  .timeline-dots {
-    margin-left: 30px;
-    font-size: 0.85rem;
-  }
-}
 
 @media (max-width: 480px) {
-  .timeline {
-    margin: 0 0.25rem;
+  #timeline {
+      width: 80%;
   }
-
-  .timeline-content {
-    margin-left: 25px;
-    font-size: 0.8rem;
-  }
-
-  .timeline-dots {
-    margin-left: 25px;
-    font-size: 0.75rem;
-  }
-}
+} 

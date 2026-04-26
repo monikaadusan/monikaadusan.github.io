@@ -1,53 +1,41 @@
 html {
   scroll-behavior: smooth;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
   background-color: var(--orange);
   margin: 0;
   font-family: "IMFellEnglish-Regular", serif;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 section {
   background-color: var(--orange);
-  padding: 3rem;
-  margin: 0 auto;
-  max-width: 80vw;
+  max-width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 0;
 }
 
-#photo-menu {
-  min-height: auto !important;
+.header-padding {
+  padding-top: 2rem;
 }
 
 #map {
   padding: 0 !important;
 }
 
-.tight-text h1,
-.tight-text p {
-  margin: 0;
-  line-height: 1.1;
-}
-
-.tight-text .date {
-  margin-bottom: 1.5rem;
-}
-
-.tight-text p {
-  font-size: 1.3rem;
-}
-
-h2 {
-  margin-bottom: 1.6rem;
-}
-
 :root {
   --orange: #9f5114;
   --lightorange: #ceac99;
-  --offwhite: #faf7f2;
+  --offwhite: #ebe5dc;
   --white: #fff;
 }
 
