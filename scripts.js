@@ -7,7 +7,7 @@ function initCountdown() {
     
     if (distance < 0) {
       document.getElementById("countdown").innerHTML = 
-        "<div class='countdown-item'><span class='countdown-number'>Svadba začína!</span></div>";
+        "<div class='countdown-item'><span class='countdown-number'>...začíname!</span></div>";
       return;
     }
 
@@ -52,6 +52,8 @@ function getPluralForm(count, singular, dual, plural) {
   }
 }
 
+
+// map ----------------------------------------------------------------
 function initMap() {
   var locations = [
     { lat: 47.756661, lng: 18.129949, title: 'Dôstojnícky Pavilón' },

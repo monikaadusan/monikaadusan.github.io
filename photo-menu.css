@@ -1,15 +1,18 @@
 #photo-menu {
-  min-height: 100vh;
+  min-height: 80vh;
   width: 100%;
   padding: 0;
+  margin-top: 0;
+  margin-bottom: 1rem;
   box-sizing: border-box;
+  background-color: var(--orange);
 }
 
 .polaroid-grid {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: -50px;
+  margin-top: -150px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   row-gap: 50px;
@@ -19,7 +22,7 @@
 
 .polaroid {
   width: 220px;
-  background: var(--white);
+  background: var(--offwhite);
   padding: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   text-align: center;
@@ -35,7 +38,7 @@
 
 .caption {
   margin-top: 20px;
-  font-size: 20px;
+  font-size: 26px;
   color: var(--orange);
 }
 
@@ -66,11 +69,16 @@
 }
 
 @media (max-width: 1200px) {
+  #photo-menu {
+    min-height: 90vh;
+    margin-bottom: 3rem;
+  }
+
   .polaroid-grid {
     row-gap: 50px;
     column-gap: 50px;
     grid-template-columns: repeat(2, 1fr);
-    margin-top: 100px;
+    margin-top: 0;
   }
 
   .polaroid {
@@ -80,28 +88,39 @@
 
   .caption {
     margin-top: 5px;
-    font-size: 16px;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
+  #photo-menu {
+    min-height: 80vh;
+  }
+
   .polaroid-grid {
     row-gap: 50px;
     column-gap: 50px;
-    margin-top: -50px;
   }
   
   .polaroid {
     width: 150px;
-    padding: 5px;
+    padding: 7px;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .caption {
+    font-size: 20px;
   }
 }
 
 @media (max-width: 480px) {  
+  #photo-menu {
+    min-height: 60vh;
+  }
+
   .polaroid-grid {
     row-gap: 25px;
     column-gap: 25px;
+    margin-top: -50px;
   }
   
   .polaroid {

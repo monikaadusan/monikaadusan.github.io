@@ -19,37 +19,38 @@
   <link rel="stylesheet" href="places.css" />
   <link rel="stylesheet" href="timeline.css" />
   <link rel="stylesheet" href="map.css" />
-  <link rel="stylesheet" href="gallery.css" />
+  <link rel="stylesheet" href="photo-menu.css" />
   <link rel="stylesheet" href="faq.css" />
+  <link rel="stylesheet" href="banner.css" />
   <script src="scripts.js" async></script>
 </head>
 
 
 <body>
 <div id="landing-page">
-  <!-- <div id="landing-image">
-    <img src="images/landing.png" class="landing-image">
-  </div> -->
   <header>
     <h3>3. október 2026</h3>
-    <div style="height: 12px;"></div>
+    <div style="height: 1.5rem;"></div>
     <h1>Monika Pinteková</h1>
     <h3>&</h3>
     <h1>Dušan Podmanický</h1>
   </header>
+
+  <div id="countdown" class="countdown"></div>
 </div>
 
 <a href="#rsvp" id="rsvpBtn" class="btn-rsvp btn rounded-circle">
-  <i class="fa-regular fa-envelope text-white"></i>
+  <i class="fa-regular fa-envelope text-offwhite"></i>
 </a>
 
-<div >
-  <section id="announcement" >
-    <div class="announcement-content">
-      <h2 class="text-white text-center">Do našej svadby zostáva...</h2>
-    <div id="countdown" class="countdown"></div>
-  </section>
+<div>
+  <div id="banner" >
+    <img src="images/banner-top.png"> 
+  </div>
 
+  <h1 class="text-offwhite text-center">
+    Menu
+  </h1>
   <section id="photo-menu">
     <div class="polaroid-grid">
       <a href="#miesta" class="polaroid-link">
@@ -108,35 +109,33 @@
   </div>
   </section> -->
 
-  <h1 id="miesta" class="text-white text-center header-padding">
+  <h1 id="miesta" class="text-offwhite text-center header-padding">
     Kde sa koná svadba?
   </h1>
-
   <section id="places">   
-
     <div class="place-row">
       <div class="place">
-        <img src="images/placeholder.png" class="place-image">
+        <img src="images/bazilika.jpg" class="place-image">
         <span class="place-caption">Bazilika sv. Ondreja</span>
       </div>
       <div class="place-text">
         <h2>Sobáš</h2>
         <p>
-          Sobáš sa bude konať v Bazilike sv. Ondreja. Vedeli ste, že ide o štvrtý 
-          najväčší kostol na Slovensku?
+          Sobáš sa bude konať v Bazilike sv. Ondreja o 15. hodine. 
+          Vedeli ste, že ide o štvrtý najväčší kostol na Slovensku?
         </p>
       </div>
     </div>
 
     <div class="place-row reverse">
       <div class="place">
-        <img src="images/placeholder.png" class="place-image">
+        <img src="images/dos-pavilon.jpg" class="place-image">
         <span class="place-caption">Dôstojnícky pavilón</span>
       </div>
       <div class="place-text">
         <h2>Hostina</h2>
         <p>
-          V minulosti pavilón slúžil pre potreby rodín armády. Na prízemí bolo 
+          Dôstojnícky pavilón v minulosti slúžil pre potreby rodín armády. Na prízemí bolo 
           pôvodne kasíno, my si tam ale spravíme svadobnú hostinu.
         </p>
       </div>
@@ -144,136 +143,150 @@
 
     <div class="place-row">
       <div class="place">
-        <img src="images/placeholder.png" class="place-image">
-        <span class="place-caption">Hotel Danubius</span>
+        <img src="images/hotel-room.jpeg" class="place-image">
+        <span class="place-caption">Ubytovanie</span>
       </div>
       <div class="place-text">
         <h2>Ubytovanie</h2>
         <p>
-          V blízkosti pavilónu máme pre vás vybrané dva hotely – 
+          Pre hostí, ktorí nie sú z okolia Komárna sme v blízkosti pavilónu vybrali dva hotely – 
           Hotel Banderium a Hotel Danubius.
         </p>
       </div>
     </div>
-
   </section>
 
   <section id="map">
     <div id="map-container"></div>
   </section>
 
-  <h1 id="program" class="d-flex justify-content-center text-white header-padding">Program</h1>  
-  <section id="timeline">
-    <div class="timeline-item">
-      <div class="timeline-content">
-        <p class="fw-semibold">14:00 &nbsp;&nbsp;Privítanie</p>
-        <small> xxxx
-        </small>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-content">
-        <p class="fw-semibold">15:00 &nbsp;&nbsp;Sobáš</p>
-        <small>Sobáš prebehne v Bazilike sv. Ondreja len 3 minúty chôdze od Dôstojníckeho pavilónu.
-        </small>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-content">
-        <p class="fw-semibold">17:00 &nbsp;&nbsp;Hostina a zábava</p>
-        <small>Po sobáši sa spoločne presunieme späť do Dôstojníckeho pavilónu, kde bude prebiehať samotná hostina a zábava.
-        </small>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-content">
-        <p class="fw-semibold">22:00 &nbsp;&nbsp;Druhá večera</p>
-        <small> xxx 
-        </small>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-content">
-        <p class="fw-semibold">23:00 &nbsp;&nbsp;Čepčenie a redový tanec</p>
-        <small> xxx 
-        </small>
-      </div>
-    </div>    
-    <div class="timeline-item">
-      <div class="timeline-content">
-        <p class="fw-semibold">Zábava</p>
-      </div>
-    </div>    
-  </section>
+  <div id="banner" >
+    <img src="images/banner-bottom.png"> 
+  </div>
 
-  <h1 id="faq" class="d-flex justify-content-center text-white header-padding">FAQ</h1>
-  <section id="faq-content">
-  <div class="faq-item">
-    <div class="faq-icon">
-      <img src="images/placeholder.png">
-    </div>
-    <div class="faq-text">
-      <div class="faq-question">Fotografovanie</div>
-      <div class="faq-answer">
-        Budeme radi ak sa o vaše pekné zábery podelíte, môžete ich nahrať cez tento odkaz. 
-        Prístup získate po vyplnení formuláru. Prosíme, vytvorte si vlastný priečinok.
+  <div id="timeline-bcg">
+    <h1 id="program" class="d-flex justify-content-center text-orange header-padding">Program</h1>  
+    <section id="timeline">
+      <div class="timeline-item">
+        <span class="timeline-time">14:00</span>
+        <div class="timeline-content">
+          <p class="fw-semibold">Privítanie</p>
+          <small> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </small>
+        </div>
       </div>
+      <div class="timeline-item">
+        <span class="timeline-time">15:00</span>
+        <div class="timeline-content">
+          <p class="fw-semibold">Sobáš</p>
+          <small>Sobáš prebehne v Bazilike sv. Ondreja len 3 minúty chôdze od Dôstojníckeho pavilónu.
+          </small>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">17:00</span>
+        <div class="timeline-content">
+          <p class="fw-semibold">Hostina a zábava</p>
+          <small>Po sobáši sa spoločne presunieme späť do Dôstojníckeho pavilónu, kde bude prebiehať samotná hostina a zábava.
+          </small>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">22:00</span>
+        <div class="timeline-content">
+          <p class="fw-semibold">Druhá večera</p>
+          <small> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </small>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">23:00</span>
+        <div class="timeline-content">
+          <p class="fw-semibold">Čepčenie a redový tanec</p>
+          <small> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </small>
+        </div>
+      </div>    
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <p class="fw-semibold">Zábava</p>
+        </div>
+      </div>    
+    </section>
+    <div id="banner" >
+      <img src="images/banner-top.png"> 
     </div>
   </div>
 
+  <h1 id="faq" class="d-flex justify-content-center text-offwhite">FAQ</h1>
+  <section id="faq-content">
   <div class="faq-item">
     <div class="faq-icon">
-      <img src="images/placeholder.png">
+      <img src="images/socials.png">
     </div>
     <div class="faq-text">
       <div class="faq-question">Sociálne siete</div>
       <div class="faq-answer">
-        Radi by sme vás požiadali, aby ste počas svadby nezdieľali fotografie ani videá 
-        novomanželov na sociálnych sieťach. Ďakujeme, že pomáhate zachovať naše súkromie.
+        Chceli by sme Vás požiadať, aby ste fotografie ani videá novomanželov nezdieľali  
+        pre verejnosť na sociálnych sieťach. Ďakujeme, že pomáhate zachovať naše súkromie.
       </div>
     </div>
   </div>
 
   <div class="faq-item">
     <div class="faq-icon">
-      <img src="images/placeholder.png">
+      <img src="images/camera.png">
+    </div>
+    <div class="faq-text">
+      <div class="faq-question">Fotografovanie</div>
+      <div class="faq-answer">
+        Fotografie si však samozrejmne môžete zdieľať medzi sebou. Budeme radi, ak sa o Vaše zábery podelíte aj s nami 
+        - môžete ich nahrať cez tento odkaz. 
+        Po vyplnení formuláru získate prístup do zdieľaného disku, kde si prosím vytvorte vlastný priečinok.
+      </div>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-icon">
+      <img src="images/hotels.png">
     </div>
     <div class="faq-text">
       <div class="faq-question">Ubytovanie</div>
       <div class="faq-answer">
-        Pre všetkých našich hostí, ktorí nebývajú v okolí Komárna máme zabezpečené ubytovanie. 
-        Bližšie informácie získate po vyplnení formuláru.
+        Pre všetkých našich hostí, ktorí nebývajú v okolí Komárna, sme zabezpečili ubytovanie. 
+        Bližšie informácie - kde, kedy a ako sa ubytovať Vám zašleme mailom po vyplnení formuláru.
       </div>
     </div>
   </div>
 
   <div class="faq-item">
     <div class="faq-icon">
-      <img src="images/placeholder.png">
+      <img src="images/dresscode.png">
     </div>
     <div class="faq-text">
       <div class="faq-question">Dresscode</div>
       <div class="faq-answer">
-        Budeme radi, ak zvolíte elegantné oblečenie (oblek, šaty alebo kostým).
+        Budeme radi, ak zvolíte elegantné oblečenie - oblek, šaty alebo kostým.
       </div>
     </div>
   </div>
 
   <div class="faq-item">
     <div class="faq-icon">
-      <img src="images/placeholder.png">
+      <img src="images/gifts.png">
     </div>
     <div class="faq-text">
-      <div class="faq-question">Svadobné dary?</div>
+      <div class="faq-question">Svadobné dary</div>
       <div class="faq-answer">
-        Ak nás chcete potešiť aj niečím navyše, budeme vďační za finančný príspevok na naše spoločné bývanie.
+        Ak nás chcete aj okrem vašej prítomnosti potešiť niečím navyše, budeme vďační za finančný príspevok, ktorý využijeme na zveľadenie našeho spoločného bývania.
       </div>
     </div>
   </div>
 
 </section>
 
-  <h1 id="rsvp" class="d-flex justify-content-center text-white header-padding">RSVP</h1>
+  <h1 id="rsvp" class="d-flex justify-content-center text-offwhite header-padding">RSVP</h1>
   <section>
     <iframe 
       src="https://docs.google.com/forms/d/e/1FAIpQLSe-Kgqp32IVOiAX7MYaHUpKn0ZGI2C_sGMRZhW7iLipeeao7w/viewform?usp=header"
@@ -282,5 +295,7 @@
     </iframe>
   </section>
 </div>
+
+<h2 class="d-flex justify-content-center text-offwhite header-padding">Ďakujeme ❤︎</h2>
 </body>
 </html>

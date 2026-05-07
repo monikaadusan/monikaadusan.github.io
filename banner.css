@@ -1,0 +1,24 @@
+#banner {
+  width: 100%;
+  background-color: var(--offwhite);
+  z-index: -10;
+}
+
+#banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  #banner {
+    width: 100%;
+  }
+
+  #banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+}
