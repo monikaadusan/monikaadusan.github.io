@@ -1,45 +1,47 @@
-function initCountdown() {
+function updateCountdown() {
   const weddingDate = new Date("October 3, 2026 15:00:00").getTime();
+  const now = new Date().getTime();
+  const distance = weddingDate - now;
   
-  setInterval(function() {
-    const now = new Date().getTime();
-    const distance = weddingDate - now;
-    
-    if (distance < 0) {
-      document.getElementById("countdown").innerHTML = 
-        "<div class='countdown-item'><span class='countdown-number'>...začíname!</span></div>";
-      return;
-    }
+  if (distance < 0) {
+    document.getElementById("countdown").innerHTML = 
+      "<div class='countdown-item'><span class='countdown-number'>...začíname!</span></div>";
+    return;
+  }
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-    const daysText = getPluralForm(days, 'deň', 'dni', 'dní');
-    const hoursText = getPluralForm(hours, 'hodina', 'hodiny', 'hodín');
-    const minutesText = getPluralForm(minutes, 'minúta', 'minúty', 'minút');
-    const secondsText = getPluralForm(seconds, 'sekunda', 'sekundy', 'sekúnd');
-    
-    document.getElementById("countdown").innerHTML = `
-      <div class="countdown-item">
-        <span class="countdown-number">${days}</span>
-        <span class="countdown-label">${daysText}</span>
-      </div>
-      <div class="countdown-item">
-        <span class="countdown-number">${hours}</span>
-        <span class="countdown-label">${hoursText}</span>
-      </div>
-      <div class="countdown-item">
-        <span class="countdown-number">${minutes}</span>
-        <span class="countdown-label">${minutesText}</span>
-      </div>
-      <div class="countdown-item">
-        <span class="countdown-number">${seconds}</span>
-        <span class="countdown-label">${secondsText}</span>
-      </div>
-    `;
-  }, 1000);
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+  const daysText = getPluralForm(days, 'deň', 'dni', 'dní');
+  const hoursText = getPluralForm(hours, 'hodina', 'hodiny', 'hodín');
+  const minutesText = getPluralForm(minutes, 'minúta', 'minúty', 'minút');
+  const secondsText = getPluralForm(seconds, 'sekunda', 'sekundy', 'sekúnd');
+  
+  document.getElementById("countdown").innerHTML = `
+    <div class="countdown-item">
+      <span class="countdown-number">${days}</span>
+      <span class="countdown-label">${daysText}</span>
+    </div>
+    <div class="countdown-item">
+      <span class="countdown-number">${hours}</span>
+      <span class="countdown-label">${hoursText}</span>
+    </div>
+    <div class="countdown-item">
+      <span class="countdown-number">${minutes}</span>
+      <span class="countdown-label">${minutesText}</span>
+    </div>
+    <div class="countdown-item">
+      <span class="countdown-number">${seconds}</span>
+      <span class="countdown-label">${secondsText}</span>
+    </div>
+  `;
+}
+
+function initCountdown() {
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
 }
 
 function getPluralForm(count, singular, dual, plural) {

@@ -48,8 +48,8 @@
 
 @media (max-width: 480px) {
   .countdown {
-    margin-top: -50%;
-    padding-bottom: 50%;
+    margin-top: auto;
+    padding-bottom: 0;
   }
 
   .countdown-item {
