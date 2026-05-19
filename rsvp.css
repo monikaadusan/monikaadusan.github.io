@@ -35,3 +35,7 @@
 #rsvp {
   margin-top: 50px;
 }
+
+#rsvp-form {
+  background-color: var(--offwhite) !important;
+}

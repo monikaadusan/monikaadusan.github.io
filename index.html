@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="photo-menu.css" />
   <link rel="stylesheet" href="faq.css" />
   <link rel="stylesheet" href="banner.css" />
+  <link rel="stylesheet" href="contact.css" />
   <script src="scripts.js" async></script>
 </head>
 
@@ -38,6 +39,61 @@
 
   <div id="countdown" class="countdown"></div>
 </div>
+
+<section id="calendar">
+  <div class="calendar-wrapper text-center">
+    <div class="calendar-header text-center">október 2026</div>
+
+    <div class="calendar">
+      <div class="calendar-grid">
+        <div class="day-name">Po</div>
+        <div class="day-name">Ut</div>
+        <div class="day-name">St</div>
+        <div class="day-name">Št</div>
+        <div class="day-name">Pi</div>
+        <div class="day-name">So</div>
+        <div class="day-name">Ne</div>
+
+        <div></div>
+        <div></div>
+        <div></div>
+
+        <div>1</div>
+        <div>2</div>
+        <div class="highlight">3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+        <div>17</div>
+        <div>18</div>
+        <div>19</div>
+        <div>20</div>
+        <div>21</div>
+        <div>22</div>
+        <div>23</div>
+        <div>24</div>
+        <div>25</div>
+        <div>26</div>
+        <div>27</div>
+        <div>28</div>
+        <div>29</div>
+        <div>30</div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <a href="#rsvp" id="rsvpBtn" class="btn-rsvp btn rounded-circle">
   <i class="fa-regular fa-envelope text-offwhite"></i>
@@ -79,35 +135,6 @@
       </a>
     </div>
   </section>
-
-  <!-- <section id="calendar">
-    <div class="calendar-wrapper text-center">
-    <div class="calendar-header text-center">október 2026</div>
-    
-    <div class="calendar">
-      <div class="calendar-grid">
-        <div class="day-name">Po</div>
-        <div class="day-name">Ut</div>
-        <div class="day-name">St</div>
-        <div class="day-name">Št</div>
-        <div class="day-name">Pi</div>
-        <div class="day-name">So</div>
-        <div class="day-name">Ne</div>
-
-        <div></div><div></div><div></div>
-
-        <div>1</div><div>2</div><div class="highlight">3</div><div>4</div>
-        <div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div>
-        <div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div>
-        <div>19</div><div>20</div><div>21</div><div>22</div><div>23</div><div>24</div><div>25</div>
-        <div>26</div><div>27</div><div>28</div><div>29</div><div>30</div>
-        <div></div><div></div>
-      </div>
-    </div>
-
-    <button class="calendar-btn">Pridať do kalendára</button>
-  </div>
-  </section> -->
 
   <h1 id="miesta" class="text-offwhite text-center header-padding">
     Kde sa koná svadba?
@@ -283,11 +310,14 @@
       </div>
     </div>
   </div>
-
 </section>
 
-  <h1 id="rsvp" class="d-flex justify-content-center text-offwhite header-padding">RSVP</h1>
-  <section>
+  <div id="banner">
+    <img src="images/banner-bottom.png">
+  </div>
+
+  <section id="rsvp-form">
+  <h1 id="rsvp" class="d-flex justify-content-center text-orange header-padding">RSVP</h1>
     <iframe 
       src="https://docs.google.com/forms/d/e/1FAIpQLSe-Kgqp32IVOiAX7MYaHUpKn0ZGI2C_sGMRZhW7iLipeeao7w/viewform?usp=header"
       >
@@ -296,6 +326,19 @@
   </section>
 </div>
 
-<h2 class="d-flex justify-content-center text-offwhite header-padding">Ďakujeme ❤︎</h2>
+<div id="banner">
+  <img src="images/banner-top.png">
+</div>
+
+<h1 id="contact" class="d-flex justify-content-center text-offwhite">Kontakt</h1>
+<section id="contact-section">
+  <div class="contact-container">
+    <div class="contact-item">
+      <p class="text-offwhite">
+        <i class="fas fa-envelope"></i> monikaadusan@gmail.com
+      </p>
+    </div>
+  </div>
+</section>
 </body>
 </html>

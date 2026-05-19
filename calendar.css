@@ -1,32 +1,31 @@
 #calendar {
-  background: var(--orange);
+  background: var(--offwhite);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 50px;
+  padding: 2rem 0 5rem 0;
   box-sizing: border-box;
   width: 100%;
-  max-width: 320px;
   flex-direction: column;
 }
 
 .calendar-wrapper {
   background: var(--offwhite);
-  border-radius: 1px;
-  padding: 15px;
+  border-radius: 6px;
+  padding: 30px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 600px;
   margin: 0 auto;
 }
 
 .calendar-header {
   font-weight: 500;
-  font-size: 30px;
+  font-size: 24px;
   color: var(--orange);
-  margin: 0 0 10px 0;
+  margin: 0 0 15px 0;
   width: 100%;
   text-align: center;
 }
@@ -37,15 +36,17 @@
   border: 1px solid var(--lightorange);
   border-radius: 3px;
   overflow: hidden;
+  gap: 0;
 }
 
 .calendar-grid div {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   text-align: center;
   color: var(--orange);
-  padding: 3px;
+  padding: 10px;
   border-right: 1px solid var(--lightorange);
   border-bottom: 1px solid var(--lightorange);
+  position: relative;
 }
 
 .calendar-grid div:nth-child(7n) {
@@ -59,46 +60,56 @@
 .day-name {
   font-weight: 600;
   background: var(--offwhite);
-  box-shadow: inset 0 -1px 0 var(--orange), inset 0 -2px 0 var(--lightorange);
+  box-shadow: inset 0 -1px 0 var(--offwhite), inset 0 -2px 0 var(--lightorange);
 }
 
 .highlight {
-  background: var(--lightorange);
+  position: relative;
 }
 
-/* .calendar-btn {
-  background: var(--orange);
-  border: none;
-  padding: 10px 18px;
-  border-radius: 6px;
-  color: var(--white);
-  cursor: pointer;
-  margin-top: 15px;
-} */
+.highlight::before {
+  content: "❤";
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: var(--orange);
+  opacity: 0.25;
+  z-index: 0;
+  pointer-events: none;
+}
 
 @media (max-width: 768px) {
-  .calendar {
-    max-width: 280px;
+  .calendar-wrapper {
+    width: 85vw;
+    padding: 20px;
   }
 
   .calendar-header {
-    font-size: 24px;
+    font-size: 32px;
   }
 
   .calendar-grid div {
-    padding: 6px 0;
-    font-size: 0.85rem;
+    padding: 8px;
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 600px) {
+  .calendar-wrapper {
+    width: 85vw;
+    padding: 15px;
+  }
+
   .calendar-header {
-    font-size: 1.5rem;
+    font-size: 24px;
+    margin-bottom: 10px;
   }
 
   .calendar-grid div {
-    padding: 4px 0;
-    font-size: 0.75rem;
+    padding: 6px;
+    font-size: 0.9rem;
   }
 }
 
@@ -112,9 +123,4 @@
     padding: 3px;
     font-size: 0.65rem;
   }
-
-  /* .calendar-btn {
-    padding: 5px 10px;
-    font-size: 0.7rem;
-  } */
 }

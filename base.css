@@ -26,8 +26,8 @@ section {
 
 iframe {
   border: none;
-  width: 100vw;
-  height: 80vh;
+  width: 600px;
+  height: 100vh;
   margin: 0 auto 2rem auto;
 }
 
