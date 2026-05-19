@@ -80,6 +80,24 @@
   pointer-events: none;
 }
 
+.calendar-btn {
+  background: var(--orange);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  color: var(--offwhite);
+  cursor: pointer;
+  margin-top: 25px;
+  font-family: "IMFellEnglish-Regular", serif;
+  font-size: 1.1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.calendar-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 @media (max-width: 768px) {
   .calendar-wrapper {
     width: 85vw;
