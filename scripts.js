@@ -176,9 +176,32 @@ function addToCalendar() {
   alert('Udalosť bola pripravená na stiahnutie. Vložte ju do svojho kalendára.');
 }
 
+function initEmailCopy() {
+  const emailElement = document.getElementById('email-copy');
+  if (!emailElement) return;
+  
+  emailElement.addEventListener('click', function() {
+    const email = this.textContent;
+    navigator.clipboard.writeText(email).then(function() {
+      const originalText = emailElement.textContent;
+      emailElement.textContent = 'Skopírované!';
+      emailElement.style.backgroundColor = 'rgba(168, 74, 0, 0.2)';
+      
+      setTimeout(function() {
+        emailElement.textContent = originalText;
+        emailElement.style.backgroundColor = '';
+      }, 2000);
+    }).catch(function(err) {
+      console.error('Failed to copy email:', err);
+      alert('Kopírovanie zlyhalo. Skúste znova.');
+    });
+  });
+}
+
 window.onload = function() {
   initMap();
   initCountdown();
   initFloatingButtonVisibility();
   initCalendarButton();
+  initEmailCopy();
 };
