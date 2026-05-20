@@ -68,7 +68,9 @@
 }
 
 .highlight::before {
-  content: "❤";
+  content: "\f004";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
   position: absolute;
   top: 60%;
   left: 50%;
@@ -101,12 +103,11 @@
 .calendar-btn {
   background: var(--orange);
   border: none;
-  padding: 12px 20px;
+  padding: 7px 15px;
   border-radius: 6px;
   color: var(--offwhite);
   cursor: pointer;
   margin-top: 25px;
-  font-family: "IMFellEnglish-Regular", serif;
   font-size: 1.1rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }

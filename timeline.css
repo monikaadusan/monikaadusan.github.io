@@ -3,7 +3,7 @@
 }
 
 #timeline {
-  width: 600px;
+  width: 500px;
   margin: 0 auto 5rem auto;
   background-color: var(--offwhite);
   display: flex;
@@ -19,7 +19,7 @@
   content: "";
   position: absolute;
   top: 40px;
-  bottom: 40px;
+  bottom: 20px;
   left: 20px;
   margin-top: -10px;
   width: 2px;

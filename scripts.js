@@ -156,24 +156,39 @@ function addToCalendar() {
   }
   
   const icsContent = `BEGIN:VCALENDAR
-    VERSION:2.0
-    PRODID:-//Wedding Calendar//EN
-    CALSCALE:GREGORIAN
-    BEGIN:VEVENT
-    SUMMARY:${eventTitle}
-    DTSTART:${formatDateForICS(eventDate)}
-    DTEND:${formatDateForICS(eventEndDate)}
-    LOCATION:${eventLocation}
-    END:VEVENT
-    END:VCALENDAR`;
+VERSION:2.0
+PRODID:-//Wedding Calendar//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+SUMMARY:${eventTitle}
+DTSTART:${formatDateForICS(eventDate)}
+DTEND:${formatDateForICS(eventEndDate)}
+LOCATION:${eventLocation}
+END:VEVENT
+END:VCALENDAR`;
   
-  const blob = new Blob([icsContent], { type: 'text/calendar' });
-  const link = document.createElement('a');
-  link.href = URL.createObjectURL(blob);
-  link.download = 'svadba-monika-dusan.ics';
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
+  // Check if it's iOS
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+  
+  if (isIOS) {
+    // For iOS, use data URI approach
+    const dataUri = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(icsContent);
+    const link = document.createElement('a');
+    link.href = dataUri;
+    link.setAttribute('download', 'svadba-monika-dusan.ics');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  } else {
+    // For other browsers, use blob approach
+    const blob = new Blob([icsContent], { type: 'text/calendar' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'svadba-monika-dusan.ics';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
   
   alert('Udalosť bola pripravená na stiahnutie. Vložte ju do svojho kalendára.');
 }
