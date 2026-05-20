@@ -156,7 +156,7 @@
   }
 
   .calendar-grid div {
-    padding: 3px;
-    font-size: 0.65rem;
+    padding: 8px;
+    font-size: 0.9rem;
   }
 }
