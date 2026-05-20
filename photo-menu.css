@@ -118,13 +118,13 @@
   }
 
   .polaroid-grid {
-    row-gap: 25px;
-    column-gap: 25px;
+    row-gap: 35px;
+    column-gap: 35px;
     margin-top: -20px;
   }
   
   .polaroid {
-    width: 110px;
+    width: 150px;
     padding: 7px;
   }
 }
