@@ -94,7 +94,7 @@
 
 @media (max-width: 480px) {
   .highlight::before {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
   }
 }
 
