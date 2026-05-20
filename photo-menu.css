@@ -99,17 +99,16 @@
   .polaroid-grid {
     row-gap: 50px;
     column-gap: 50px;
-    grid-template-columns: repeat(2, 1fr);
   }
   
   .polaroid {
-    width: 200px;
-    padding: 12px;
+    width: 150px;
+    padding: 7px;
     grid-template-columns: repeat(2, 1fr);
   }
 
   .caption {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 
@@ -121,11 +120,11 @@
   .polaroid-grid {
     row-gap: 25px;
     column-gap: 25px;
-    margin-top: -50px;
+    margin-top: -20px;
   }
   
   .polaroid {
-    width: 100px;
-    padding: 5px;
+    width: 110px;
+    padding: 7px;
   }
 }

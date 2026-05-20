@@ -82,15 +82,9 @@
   pointer-events: none;
 }
 
-@media (max-width: 768px) {
-  .highlight::before {
-    font-size: 4rem;
-  }
-}
-
 @media (max-width: 480px) {
   .highlight::before {
-    font-size: 1.2rem;
+    font-size: 2.3rem;
   }
 }
 
