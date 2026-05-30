@@ -31,10 +31,13 @@
 }
 
 @media screen and (max-width: 480px) {
-  
+  #landing-page {
+    height: 90vh;
+  }
+
   #landing-page img {
-  width: auto;
-  height: 80px;
-  margin-bottom: 1rem;
-}
+    width: auto;
+    height: 80px;
+    margin-bottom: 1rem;
+  }
 }
