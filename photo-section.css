@@ -7,7 +7,7 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  width: 100%;
+  width: 100vw;
 }
 
 .photographer-card {
@@ -19,15 +19,11 @@
   padding-top: 1rem;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .photographer-card {
     width: 80vw;
   }
-
-  .photographer-card p {
-    font-size: 1rem;
-  }
-
+  
   .photographer-card i {
     font-size: 1.1rem;
   }
@@ -35,10 +31,10 @@
   #photographer-section {
     margin-bottom: 2rem;
   }
+}
 
-  @media (max-width: 480px) {
+@media (max-width: 550px) {
   .photographer-thanks {
     font-size: 0.95rem;
   }
-}
 }
