@@ -1,5 +1,5 @@
 #contact-section {
-  width: 550px;
+  width: 500px;
   margin: 0 auto 5rem auto;
   display: flex;
   flex-direction: column;
@@ -12,7 +12,6 @@
 
 .contact-item {
   background-color: var(--offwhite);
-  color: var(--orange);
   padding: 10px;
   border-radius: 6px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
@@ -43,7 +42,6 @@
 
 .email-clickable {
   cursor: pointer;
-  text-decoration: underline;
   transition: all 0.2s ease;
   padding: 2px 6px;
   border-radius: 3px;

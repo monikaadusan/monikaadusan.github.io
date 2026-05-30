@@ -33,7 +33,7 @@
   width: 100%;
   object-fit: cover;
   display: block;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 5;
 }
 
 .caption {
@@ -115,6 +115,7 @@
 @media (max-width: 480px) {  
   #photo-menu {
     min-height: 60vh;
+    margin-top: 4rem;
   }
 
   .polaroid-grid {

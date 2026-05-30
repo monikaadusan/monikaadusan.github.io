@@ -5,7 +5,7 @@
   width: 100vw;
   align-items: center;
   margin-left: calc(-50vw + 50%);
-  margin-top: auto;
+  margin-top: -5rem;
   z-index: 10;
 }
 
@@ -50,6 +50,7 @@
   .countdown {
     margin-top: auto;
     padding-bottom: 0;
+    margin-top: -5rem;
   }
 
   .countdown-item {

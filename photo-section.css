@@ -1,0 +1,45 @@
+/* Photographer section */
+#photographer-section {
+  margin-bottom: 3rem;
+}
+
+.photographer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.photographer-card {
+  width: 500px;
+}
+
+/* .photographer-card {
+  width: min(500px, 85vw);
+} */
+
+/* Mobile */
+@media (max-width: 480px) {
+  .photographer-card {
+    width: 80vw;
+  }
+
+  .photographer-card p {
+    font-size: 1rem;
+  }
+
+  .photographer-card i {
+    font-size: 1.1rem;
+  }
+
+  #photographer-section {
+    margin-bottom: 2rem;
+  }
+}
+
+/* @media (max-width: 480px) {
+  .photographer-card p {
+    font-size: 1rem;
+  }
+} */

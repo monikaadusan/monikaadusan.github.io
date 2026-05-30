@@ -23,20 +23,37 @@
   <link rel="stylesheet" href="faq.css" />
   <link rel="stylesheet" href="banner.css" />
   <link rel="stylesheet" href="contact.css" />
+  <link rel="stylesheet" href="photo-section.css" />
   <script src="scripts.js" async></script>
 </head>
 
 
 <body>
 <div id="landing-page">
+  <img src="images/landing.png"> 
+
   <header>
-    <h3>3. október 2026</h3>
-    <div style="height: 1.5rem;"></div>
     <h1>Monika Pinteková</h1>
     <h3>&</h3>
     <h1>Dušan Podmanický</h1>
+    <div style="height: 1.5rem;"></div>
+    <h3>3. október 2026</h3>
   </header>
+</div>
+  
+<div id="banner-image-top" >
+  <img src="images/banner-offwhite-bottom.png"> 
+</div>
 
+<section id="big-image">
+  <img src="images/background.jpg"> 
+</section>
+  
+<div id="banner-image-bottom" >
+  <img src="images/banner-offwhite-top.png"> 
+</div>
+
+<section id="calendar">
   <div id="countdown" class="countdown">
     <div class="countdown-item">
       <span class="countdown-number">-</span>
@@ -55,9 +72,7 @@
       <span class="countdown-label">sekúnd</span>
     </div>
   </div>
-</div>
 
-<section id="calendar">
   <div class="calendar-wrapper text-center">
     <div class="calendar-header text-center">október 2026</div>
 
@@ -130,25 +145,25 @@
     <div class="polaroid-grid">
       <a href="#miesta" class="polaroid-link">
         <div class="polaroid">
-          <img src="images/placeholder.png" alt="Miesta">
+          <img src="images/1.jpg" alt="Miesta">
           <div class="caption">Miesta</div>
         </div>
       </a>
       <a href="#program" class="polaroid-link">
         <div class="polaroid">
-          <img src="images/placeholder.png" alt="Program">
+          <img src="images/2.jpg" alt="Program">
           <div class="caption">Program</div>
         </div>
       </a>
       <a href="#faq" class="polaroid-link">
         <div class="polaroid">
-          <img src="images/placeholder.png" alt="FAQ">
+          <img src="images/5.jpg" alt="FAQ">
           <div class="caption">FAQ</div>
         </div>
       </a>
       <a href="#rsvp" class="polaroid-link">
         <div class="polaroid">
-          <img src="images/placeholder.png" alt="RSVP">
+          <img src="images/4.jpg" alt="RSVP">
           <div class="caption">RSVP</div>
         </div>
       </a>
@@ -161,7 +176,7 @@
   <section id="places">   
     <div class="place-row">
       <div class="place">
-        <img src="images/bazilika.jpg" class="place-image">
+        <img src="images/bazilika.png" class="place-image">
         <span class="place-caption">Bazilika sv. Ondreja</span>
       </div>
       <div class="place-text">
@@ -175,7 +190,7 @@
 
     <div class="place-row reverse">
       <div class="place">
-        <img src="images/dos-pavilon.jpg" class="place-image">
+        <img src="images/pavilon.png" class="place-image">
         <span class="place-caption">Dôstojnícky pavilón</span>
       </div>
       <div class="place-text">
@@ -206,8 +221,16 @@
     <div id="map-container"></div>
   </section>
 
-  <div id="banner" >
+  <div id="banner" style="background-color: transparent;" >
     <img src="images/banner-bottom.png"> 
+  </div>
+
+  <section id="big-image">
+    <img src="images/cesta.jpg" style="margin-bottom: -2rem; height: 120%;"> 
+  </section>
+    
+  <div id="banner-image-bottom" >
+    <img src="images/banner-offwhite-top.png"> 
   </div>
 
   <div id="timeline-bcg">
@@ -256,7 +279,7 @@
       <div class="timeline-item">
         <div class="timeline-content">
           <p class="fw-semibold">Druhá večera a zábava</p>
-          <small> Druhá večera bude v podobe Švédskych stolov, kde načerpáme energiu na ďalšiu zábavu až do rána.
+          <small> Druhá večera bude v podobe švédskych stolov, kde načerpáme energiu na ďalšiu zábavu až do rána.
           </small>
         </div>
       </div>    
@@ -355,11 +378,57 @@
 <section id="contact-section">
   <div class="contact-container">
     <div class="contact-item">
-      <p class="text-offwhite">
+      <p>
         <i class="fas fa-envelope"></i> <span id="email-copy" class="email-clickable">monikaadusan031026@gmail.com</span>
       </p>
     </div>
   </div>
 </section>
+
+<section id="final-polaroid"
+         style="display:flex;
+                flex-direction:row;
+                justify-content:center;
+                align-items:center;
+                flex-wrap:nowrap;
+                gap:2rem;
+                width:100%;
+                padding-bottom:5rem;">
+
+  <div class="polaroid" style="transform:rotate(-4deg);">
+    <img src="images/3.jpg">
+    <div class="caption" style="margin-top: 2rem;"></div>
+  </div>
+
+  <div class="polaroid" style="transform:rotate(4deg);">
+    <img src="images/6.jpg" >
+    <div class="caption" style="margin-top: 2rem;"></div>
+  </div>
+</section>
+
+<p class="text-center text-offwhite mb-0">
+  Ďakujeme Lucke Skaličanovej za krásne fotky!
+</p>
+
+<section id="photographer-section">
+  <div class="photographer-container">
+
+    <div class="contact-item photographer-card">
+      <p>
+        <i class="fa-brands fa-instagram"></i>
+        <a
+          href="https://www.instagram.com/luciaondovcik"
+          target="_blank"
+          class="email-clickable text-decoration-none"
+          style="color: var(--orange);"
+        >
+          luciaondovcik
+        </a>
+      </p>
+    </div>
+
+  </div>
+</section>
+
 </body>
 </html>
