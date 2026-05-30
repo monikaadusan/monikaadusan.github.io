@@ -96,7 +96,11 @@ h3 {
 }
 
 p {
-  font-size: 0.95rem;
+  font-size: 1.2rem;
+}
+
+small {
+  font-size: 1.2rem;
 }
 
 #rsvp {
@@ -139,6 +143,10 @@ p {
   }
 
   p {
+    font-size: 0.95rem;
+  }
+
+  small {
     font-size: 0.95rem;
   }
 
