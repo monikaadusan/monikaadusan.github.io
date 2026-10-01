@@ -75,14 +75,17 @@ function initMap() {
     touchZoom: true,       
     dragging: true
   });
-  
 
-  var CartoDB_Voyager = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-    maxZoom: 20
-  });
+  var OpenStreetMap = L.tileLayer(
+    'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    {
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      maxZoom: 19
+    }
+  );
 
-  CartoDB_Voyager.addTo(map);
+  OpenStreetMap.addTo(map);
 
   var bounds = L.latLngBounds();
 
